@@ -24,10 +24,10 @@ app.set('view engine', 'handlebars');
 
 
 const homepageRoute = require('./controllers/homepage-route');
-const dashboardRoute = require('./controllers/api/dashboard-route');
+const dashboardRoute = require('./controllers/dashboard-route');
 const loginRoute = require('./controllers/api/login-route');
 const logoutRoute = require('./controllers/api/logout-route');
-const createPostRoute = require('./controllers/api/creatPost-route');
+const createPostRoute = require('./controllers/creatPost-route');
 
 app.use('/', homepageRoute);
 app.use('/dashboard', dashboardRoute);
