@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blog</title>
+    <link src="/public/CSS/style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Tech Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="/controllers/homepage-route.js">Home</a></li>
+                <li><a href="/controllers/dashboard-route.js">Dashboard</a></li>
+                <li><a href="/controllers/api/login-route.js">Login</a></li>
+                <li><a href="/controllers/api/logout-route.js">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Latest Tech Blog Posts</h2>
+            <ul>
+                {{#each posts}}
+                <li>
+                    <h3>{{this.title}}</h3>
+                    <p>{{this.content}}</p>
+                    <p>Published on: {{this.createdAt}}</p>
+                </li>
+                {{/each}}
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 CMS Blog</p>
+    </footer>
+</body>
+</html>
